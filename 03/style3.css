@@ -1,0 +1,143 @@
+/* Общие стили */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fafafa;
+    align-items: center;
+}
+
+/* Логотип */
+.logo, .footer-logo {
+    font-size: 24px;
+}
+
+/* Социальные иконки */
+.social-icons, .footer-social {
+    font-size: 16px;
+}
+
+.hero {
+    background-color: #f9d16b;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.invite-form {
+    display: inline-flex;
+    border: none;
+}
+
+.invite-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 250px;
+    border-radius: 5px 0 0 5px;
+}
+
+.invite-form button {
+    padding: 10px 20px;
+    background-color: #b08d57;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.info-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.icon {
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.icon-phone img {
+    width: 150px;
+    height: auto;
+}
+
+.refer-section {
+    text-align: center;
+    background-color: #f9d16b;
+    padding: 50px 20px;
+}
+
+.refer-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.refer-btn {
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.footer {
+    background-color: #ffffff; /* Цвет фона */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: center; /* Центрируем по вертикали */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 10px; /* Отступ между элементами */
+    padding: 20px; /* Внутренние отступы */
+}
+
+.footer-logo img {
+    width: 50px; /* Задаём размер логотипа */
+    height: auto;
+    margin-bottom: 10px; /* Отступ между логотипом и иконками */
+}
+
+.footer-social {
+    display: flex; /* Горизонтальное размещение иконок */
+    gap: 20px; /* Отступ между иконками */
+}
+
+.footer-social span {
+    margin: 0; /* Убираем margin, т.к. используется gap */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 20px; /* Размер иконок */
+    color: #333; /* Цвет иконок */
+}
+
