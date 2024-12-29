@@ -37,7 +37,8 @@ padding: 54px 24px 91px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-  background-color: beige;
+   background-color: beige;
+   
   }
 
 .icon-wrapper img {
@@ -118,4 +119,6 @@ padding: 54px 24px 91px 20px;
     color: #e53935; /* Красный цвет для цены */
     margin: 0; /* Убираем отступы */
   }
-  
+  .icon-wrapper:hover {
+    background-color: #ffa500; /* Фон при наведении */
+}

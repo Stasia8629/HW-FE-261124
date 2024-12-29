@@ -1,0 +1,233 @@
+body {
+    background: url('./img/Rectangle\ 1.png') no-repeat center center/cover;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .logo-date {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+  
+  .logo img {
+    width: 156px;
+    height: auto;
+  }
+  
+  .date {
+    font-size: 24px;
+    color: #ccc;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .search-icon {
+    font-size: 43px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .profile-img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Featured Block */
+  .featured {
+    padding: 50px;
+    color: rgba(167, 166, 166, 1);
+    background-color: transparent;
+    max-width: 750px;
+    font-size: 24px;
+  }
+  
+  /* Genre */
+  .genre {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(167, 166, 166, 1); /* Серый цвет */
+    margin-bottom: 10px;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff; /* Белый цвет */
+    margin-bottom: 20px;
+  }
+  
+  /* Details */
+  .details {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .details .director,
+  .details .seasons {
+    font-weight: bold;
+    color: #fff; /* Белый цвет */
+  }
+  
+  .details .gray {
+    color: rgba(167, 166, 166, 1); /* Серый цвет */
+  }
+  
+  /* Description */
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(167, 166, 166, 1); /* Серый цвет */
+    margin-bottom: 20px;
+  }
+  
+  /* Ratings */
+  .ratings {
+    display: flex;
+    gap: 5px; /* Расстояние между звёздами */
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .ratings .fa-star {
+    font-size: 20px; /* Размер звёзд */
+    color: gold; /* Золотой цвет */
+    cursor: pointer; /* Указатель при наведении */
+  }
+  
+  
+  /* Buttons */
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .stream-now {
+    background-color: #e50914;
+    color: #fff;
+  }
+  
+  .all-episodes {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  /* Секция Popular This Week */
+.popular {
+    padding: 20px 50px;
+    color: #fff;
+    position: relative;
+   min-width: max-content;
+  }
+  
+  .popular h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative; /* Установить относительное позиционирование для заголовка */
+  }
+  
+  .movies-wrapper {
+    position: relative;
+    width: calc(150px * 5 + 80px); /* 5 фильмов по 150px и 4 отступа по 20px */
+}
+
+.movies {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    position: relative;
+}
+  
+  /* Фильмы */
+  .movies img {
+    width: auto; /* Ширина изображения фильма */
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+  .movies img:hover {
+    transform: scale(1.05);
+  }
+  
+/* Контейнер стрелок */
+.arrows {
+    position: absolute;
+    top: -40px; /* На уровне заголовка */
+    right: 0; /* Привязываем к правому краю контейнера фильмов */
+    display: flex;
+    gap: 10px; /* Расстояние между стрелками */
+    z-index: 1;
+    justify-content: flex-end; /* Стрелки находятся справа */
+    width: auto; /* Убираем фиксированную ширину */
+}
+
+  
+.arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    pointer-events: all; /* Делаем стрелки кликабельными */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Иконки внутри стрелок */
+.arrow i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.arrow:hover {
+    border-color: rgba(167, 166, 166, 1); /* Серый цвет рамки при наведении */
+}
+
+.arrow:hover i {
+    color: rgba(167, 166, 166, 1); /* Серый цвет иконки при наведении */
+}
+.age-rating {
+    position: absolute;
+    bottom: 25%; /* Расположение от нижнего края */
+    right: 0px; /* Расположение от правого края */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Высота блока */
+    padding: 0 15px; /* Отступы по бокам */
+    background-color: #ccc; /* Серый фон */
+    color: #fff; /* Белый текст */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    border-left: 25px solid #e50914; /* Красная полоска с помощью бордера */
+    
+}
