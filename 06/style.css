@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 19px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a.active {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #f39c12;
+  border-radius: 50%;
+}
+nav a:hover {
+  color: #f39c12; /* Оранжевый цвет текста при наведении */
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.actions .category:hover {
+  color: #f39c12; /* Оранжевый цвет при наведении */
+}
+.search i:hover {
+  color: #f39c12; /* Оранжевый цвет при наведении */
+}
+
+.category {
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 19px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.search i {
+  font-size: 24px;
+  color: #333;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 10%;
+  gap: 146px;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.workspace-image {
+  width: 411px;
+  height: 533px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.text-section {
+  flex: 1;
+  position: relative;
+}
+
+.work-space {
+  color: #f39c12;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 65px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #333;
+}
+
+.description {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #666;
+}
+
+.watch-video {
+  display: flex; /* Выравнивание кнопки и текста в одну линию */
+  align-items: center; /* Вертикальное выравнивание */
+  gap: 15px; /* Расстояние между кнопкой и текстом */
+  margin-top: 35px; /* Отступ сверху между текстом и секцией "Watch Video" */
+}
+
+
+.play-button {
+  width: 85px;
+  height: 85px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.play-button:hover {
+  background-color: #008c9e;
+}
+
+.social-icons {
+  position: absolute;
+  right: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  bottom: -25px;
+  
+}
+
+.social-icons a {
+  font-size: 20px; /* Размер иконок */
+  color: #333; /* Основной цвет иконок */
+  text-decoration: none; /* Убираем подчёркивание */
+  display: inline-flex; /* Гибкое выравнивание */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Размер контейнера */
+  height: 40px; /* Размер контейнера */
+  border-radius: 50%; /* Скруглённый контейнер */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный эффект */
+}
+
+.social-icons a:hover {
+  background-color: #f39c12; /* Оранжевый фон при наведении */
+  color: #fff; /* Белый цвет иконки */
+  transform: scale(1.2); /* Увеличение размера иконки */
+}
+
+
+.text-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 400px;
+  background-color: #312f2f;
+}
+.orange-line {
+  width: 188px; /* Длина полосы */
+  height: 6px; /* Толщина полосы */
+  background-color: #f39c12; /* Цвет полосы */
+  margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #00bcd4; /* Голубой фон */
+  padding: 20px 10%; /* Отступы */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между изображениями и текстом */
+}
+
+.client-images {
+  display: flex;
+}
+
+.client-images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Скругленные углы */
+  border: 2px solid #fff; /* Белая рамка */
+  object-fit: cover;
+  margin-left: -10px; /* Наложение изображений */
+}
+
+.client-images img:first-child {
+  margin-left: 0; /* Убираем отступ у первого изображения */
+}
+
+.client-text {
+  font-size: 18px;
+  color: #fff; /* Белый текст */
+  font-weight: bold;
+}
+
