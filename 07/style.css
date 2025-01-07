@@ -1,0 +1,384 @@
+/* Змінні */
+:root {
+  --primary-color: #f39c12; /* Оранжевий */
+  --secondary-color: #00bcd4; /* Голубий */
+  --text-color: #333; /* Основний текст */
+  --light-text-color: #666; /* Світлий текст */
+  --white: #fff; /* Білий */
+  --gray: #312f2f; /* Сірий */
+  --font-primary: 'Roboto', sans-serif; /* Основний шрифт */
+  --font-secondary: 'Nunito Sans', sans-serif; /* Додатковий шрифт */
+}
+
+/* Загальні стилі */
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 1rem; /* Базовий розмір шрифту */
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
+  border-bottom: 1px solid #ddd;
+  background-color: var(--white);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+a {
+  color: inherit; /* Унаследовать цвет текста */
+  text-decoration: none; /* Прибрати підкреслення */
+}
+
+a:hover {
+  color: #f39c12; /* Оранжевий колір при наведенні */
+}
+
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+nav a.active {
+  position: relative;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search i {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.search i:hover {
+  color: var(--primary-color);
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 10%;
+  gap: 9rem;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.workspace-image {
+  width: 25.6rem;
+  height: 33.3rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.text-section {
+  flex: 1;
+  position: relative;
+}
+
+.work-space {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: var(--font-secondary);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  color: var(--light-text-color);
+}
+
+.watch-video {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.play-button {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.play-button:hover {
+  background-color: #008c9e;
+}
+
+.social-icons {
+  position: absolute;
+  right: -1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  bottom: -1.5rem;
+}
+
+.social-icons a {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: scale(1.2);
+}
+
+.text-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.1rem;
+  height: 25rem;
+  background-color: var(--gray);
+}
+
+.orange-line {
+  width: 11.75rem;
+  height: 0.4rem;
+  background-color: var(--primary-color);
+  margin: 1.25rem 0;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  padding: 1.25rem 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.client-images img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--white);
+  object-fit: cover;
+  margin-left: -0.6rem;
+}
+
+.client-text {
+  font-size: 1.125rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Адаптивність */
+/* Адаптація для планшетів (768px і нижче) */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Выровнять элементы по вертикали */
+      flex-wrap: wrap; /* Разрешить перенос строк, если места мало */
+      padding: 1.5% 5%;
+      flex-direction: column;
+    }
+  
+    nav {
+      display: flex;
+      gap: 1.5rem; /* Расстояние между пунктами меню */
+      align-items: center; /* Выровнять по вертикали */
+      order: 1; /* Убедиться, что меню остается первым */
+    }
+  
+    .actions {
+      display: flex;
+      align-items: center; /* Выровнять "Category" и иконку поиска */
+      gap: 1rem; /* Расстояние между элементами */
+      order: 2; /* Разместить действия после навигации */
+    }
+  
+    .category {
+      font-family: var(--font-secondary);
+      font-size: 1rem;
+      line-height: 1;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      order: 0; /* Логотип остается первым элементом */
+      margin-bottom: 10px; /* Отступ для визуального разделения */
+    }
+  }
+  
+
+  .main-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5%;
+  }
+
+  .workspace-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+    .text-section {
+      flex: 1;
+      position: relative;
+    }
+  
+    .text-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -2rem; /* Сдвигаем линию правее */
+      width: 1px;
+      height: 350px; /* Длина линии уменьшена */
+      background-color: var(--gray); /* Цвет линии */
+    }
+  
+    .social-icons {
+      position: absolute;
+      right: -3rem; /* Смещаем иконки под линию */
+      top: 360px; /* Расстояние от верхней части линии */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem; /* Расстояние между иконками */
+    }
+  
+    .social-icons a {
+      font-size: 1.15rem; /* Уменьшенный размер иконок */
+      width: 2.2rem; /* Уменьшенный размер контейнера */
+      height: 2.2rem;
+    }
+  }
+  
+
+/* Адаптація для телефонів (480px і нижче) */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.8rem; /* Ще більше зменшення розміру тексту */
+  }
+
+  .main-content {
+    padding: 3%;
+  }
+
+  .title {
+    font-size: 1.8rem; 
+    text-align: center; 
+  }
+
+  .orange-line {
+    margin: 15px auto; 
+  }
+
+  .description {
+    text-align: center; /* Центрування тексту */
+    font-size: 0.9rem; /* Зменшення розміру */
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center; /* Центрування іконок */
+    margin-top: 5px;
+    bottom: 80px;
+  }
+
+  footer {
+    padding: 10px 5%;
+    text-align: center;
+  }
+
+  .client-images img {
+    width: 30px; /* Зменшення розміру аватарів */
+    height: 30px;
+  }
+
+  .client-text {
+    font-size: 0.9rem; /* Зменшення тексту */
+  }
+}
+.text-section::after {
+ 
+  height: 300px; /* Длина линии уменьшена */
+  
+}
