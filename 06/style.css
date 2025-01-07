@@ -33,6 +33,7 @@ nav a {
 }
 
 nav a.active {
+  position: relative;
   color: #f39c12;
   font-weight: bold;
 }
