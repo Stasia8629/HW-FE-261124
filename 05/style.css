@@ -1,5 +1,7 @@
 body {
-    background: url('./img/Rectangle\ 1.png') no-repeat center center/cover;
+  font-family: 'Inter', sans-serif; /* Основной шрифт по умолчанию */
+  font-weight: 400; /* Регулярный стиль для всего текста по умолчанию */ 
+  background: url('./img/Rectangle\ 1.png') no-repeat center center/cover;
   }
   
   /* Header */
@@ -23,6 +25,8 @@ body {
   }
   
   .date {
+    font-family: 'Open Sans', sans-serif; /* Отличающийся шрифт для даты */
+    font-weight: 400; /* Регулярный стиль */
     font-size: 24px;
     color: #ccc;
     padding-left: 10px;
@@ -47,7 +51,10 @@ body {
     border-radius: 50%;
     object-fit: cover;
   }
-  
+  .featured .title {
+    font-family: 'Inter', sans-serif; /* Используем Inter */
+    font-weight: 700; /* Жирный стиль */
+}
   /* Featured Block */
   .featured {
     padding: 50px;
@@ -59,11 +66,30 @@ body {
   
   /* Genre */
   .genre {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: rgba(167, 166, 166, 1); /* Серый цвет */
-    margin-bottom: 10px;
+    display: flex; /* Расположение в строку */
+    justify-content: left; /* Центрирование */
+    align-items: center; /* Выравнивание по вертикали */
+    font-family:'Open Sans', sans-serif; /* Шрифт */
+    font-weight: 400;
+    color: #fff; /* Цвет текста */
+    gap: 20px
   }
+  
+  .genre span {
+    position: relative; /* Для добавления линий через псевдоэлементы */
+  }
+  
+  .genre span:not(:first-child)::before {
+    content: ''; /* Создаём линию */
+    position: absolute; /* Позиционируем относительно слова */
+    left: -10px; /* Смещаем линию влево от слова */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%);
+    width: 2px; /* Толщина линии */
+    height: 100%; /* Высота линии равна высоте текста */
+    background-color: rgb(241, 241, 241); /* Цвет линии */
+  }
+  
   
   /* Title */
   .title {
